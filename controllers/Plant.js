@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 const { Router } = require("express");
 //IMPORT OUR MODEL
-const Song = require("../models/Plant")
+const Plant = require("../models/Plant")
 
 // SEED DATA FOR Plant ROUTE
 const plantSeed = [

@@ -8,22 +8,22 @@ const DailyTask = require("../models/DailyTask")
 // SEED DATA FOR dailytask ROUTE
 const dailytaskSeed = [
     { 
-        task1: "String",
-        task2: "String",
-        task3: "String",
+        task1: "Watering day",
+        task2: "Sprinkling day",
+        task3: "repotting day",
         date:"String",
            
     },
     {
-        task1: "String",
-        task2: "String",
-        task3: "String",
+        task1: "Watering day",
+        task2: "Sprinkling day",
+        task3: "repotting day",
         date:"String",     
      },
      {  
-        task1: "String",
-        task2: "String",
-        task3: "String",
+        task1: "Watering day",
+        task2: "Sprinkling day",
+        task3: "repotting day",
         date:"String",   
      },
   ];
