@@ -3,7 +3,7 @@ require("dotenv").config();
 // IMPORT PLANTS ROUTER
 const plantRouter = require("./controllers/Plant")
 // Import DailyTask Router
-
+const taskRouter = require("./controllers/DailyTask")
 //GET PORT FROM ENV VARIABLES
 const PORT = process.env.PORT;
 
@@ -25,7 +25,9 @@ app.use(morgan("tiny")); // <----- logging for debugging
 
 // ROUTES AND ROUTES
 app.get("/", (req, res) => res.send("Server is Working")); // <--- Route to test server
-
-
+// Plant Router
+app.use("/plants", plantRouter) // send all "/plants"
+// DailyTask Router
+app.use("/dailytasks", taskRouter)
 // Server Listener
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
