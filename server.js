@@ -1,6 +1,8 @@
 require("dotenv").config();
 
 // IMPORT PLANTS ROUTER
+const plantRouter = require("./controllers/Plant")
+// Import DailyTask Router
 
 //GET PORT FROM ENV VARIABLES
 const PORT = process.env.PORT;
