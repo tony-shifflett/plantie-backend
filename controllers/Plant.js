@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { Router } = require("express");
 //IMPORT OUR MODEL
 const Plant = require("../models/Plant")
-
+const DailyTask = require("./DailyTask")
 // SEED DATA FOR Plant ROUTE
 const plantSeed = [
     { 
@@ -15,8 +15,8 @@ const plantSeed = [
        tempature:"20-24˚F",
        water: "150ml",
        sunlight:"Indirect light",
-       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts."    
-    },
+       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
+      },
     {
         name:"Lia",
         type:"Gypsophilia",
@@ -32,6 +32,7 @@ const plantSeed = [
         type:"Cactus",
         img: "https://images.unsplash.com/photo-1508022057371-4f937727f440?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdXNlJTIwY2FjdHVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
         frequency: "none",
+        temperature:"34 - 36˚F",
         water: "none",
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!"    
@@ -62,11 +63,11 @@ router.get("/seed", async (req, res) => {
   router.get("/", async (req, res) => {
     try {
       console.count()
-      // query database for all the songs
-      const songs = await Song.find({});
-      // send songs as JSON
+      // query database for all the plants
+      const plants = await Plant.find({});
+      // send plants as JSON
       console.count()
-      res.json(songs);
+      res.json(plants);
     } catch (error) {
       // return error as JSON with an error status
       res.status(400).json(error);
