@@ -8,14 +8,15 @@ const model = mongoose.model;
 // Create Song Schema
 const plantSchema = new Schema(
     {
-        name:String,
+        name:{type:String, require:true},
         type:String,
         img: String,
         frequency: String,
-        tempature: String,
+        temperature: String,
         water: String,
         sunlight:String,
-        info: String
+        info: String,
+        tasks: [{ref:"DailyTask", type:mongoose.Schema.Types.ObjectId}]
      
       },
     

@@ -4,27 +4,27 @@ const router = require("express").Router();
 const { Router } = require("express");
 //IMPORT OUR MODEL
 const DailyTask = require("../models/DailyTask")
-
+const Plant = require("../models/Plant")
 // SEED DATA FOR dailytask ROUTE
 const dailytaskSeed = [
     { 
-        task1: "Watering day",
-        task2: "Sprinkling day",
-        task3: "repotting day",
-        date:"String",
+        water: "Time to water",
+        sprinkling: "Time for fertilizer",
+        repotting: "Time to upgrade pot size",
+        
            
     },
     {
-        task1: "Watering day",
-        task2: "Sprinkling day",
-        task3: "repotting day",
-        date:"String",     
+        water: "Not water time",
+        sprinkling: "fertilizer",
+        repotting: "Time to upgrade pot size",
+             
      },
      {  
-        task1: "Watering day",
-        task2: "Sprinkling day",
-        task3: "repotting day",
-        date:"String",   
+        water: "Time to water",
+        sprinkling: "No fertilizer",
+        repotting: "Time to upgrade pot size",
+           
      },
   ];
 
@@ -77,20 +77,13 @@ router.get("/seed", async (req, res) => {
   });
   
   // update Route
-  router.put("/:id", async (req, res) => {
-    try {
-      // pass the request body to update and existing dailytask in the database
-      const updatedDailyTask = await DailyTask.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        { new: true }
-      );
-      // send newly updated dailytask back as JSON
-      res.json(updatedDailyTask);
-    } catch (error) {
-      // return error as JSON with an error status
-      res.status(400).json(error);
-    }
+  router.put("/:plantId/addDailyTask/:id", async (req, res) => {
+    const dailytask = await DailyTask.findById(req.params.id)
+    console.log("DailyTask")
+    const plant = await Plant.findByIdAndUpdate(req.params.plantId, {$push: {tasks: dailytask.id},
+    new: true
+    })
+    res.json({status: 200,data: plant})
   });
   
   // delete Route

@@ -8,10 +8,9 @@ const model = mongoose.model;
 // Create Song Schema
 const dailytaskSchema = new Schema(
     {
-        task1: String,
-        task2: String,
-        task3: String,
-        date:String,
+        water:String,
+        sprinkling: String,
+        repotting: String,
         
      
       },
