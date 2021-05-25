@@ -5,7 +5,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 // PULL OUT ENVIRONMENTAL VARIABLE FROM PROCESS.ENV OBJECT
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODBURI = process.env.MONGODBURI;
 
 // Optional Configuration Object to Remove Mongo Deprecation Warnings
 const config = { useUnifiedTopology: true, useNewUrlParser: true };
