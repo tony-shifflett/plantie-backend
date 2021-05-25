@@ -11,7 +11,7 @@ const MONGODBURI = process.env.MONGODBURI;
 const config = { useUnifiedTopology: true, useNewUrlParser: true };
 
 //Establish Connection to Database
-mongoose.connect(MONGODB_URI, config);
+mongoose.connect(MONGODBURI, config);
 
 // Create Database Connection message for Open, Close, Error
 mongoose.connection
