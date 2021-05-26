@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { Router } = require("express");
 //IMPORT OUR MODEL
 const Plant = require("../models/Plant")
-const DailyTask = require("./DailyTask")
+const DailyTask = require("../models/DailyTask")
 // SEED DATA FOR Plant ROUTE
 const plantSeed = [
     { 
@@ -19,7 +19,7 @@ const plantSeed = [
        sunlight:"Indirect light",
        info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
        isVisible: true,
-       task:{DailyTask,water},
+       task:[]
       },
     {
         
@@ -33,7 +33,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        task:{DailyTask,water}     
+        task:[]   
      },
      {  
         
@@ -47,7 +47,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        task:{DailyTask,repotting}    
+        task:[]    
      },
    
   ];
