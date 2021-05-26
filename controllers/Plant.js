@@ -19,7 +19,7 @@ const plantSeed = [
        sunlight:"Indirect light",
        info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
        isVisible: true,
-       task:[]
+       tasks:[]
       },
     {
         
@@ -33,7 +33,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        task:[]   
+        tasks:[]   
      },
      {  
         
@@ -47,7 +47,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        task:[]    
+        tasks:[]    
      },
    
   ];
@@ -61,11 +61,18 @@ router.get("/seed", async (req, res) => {
       // remove all plants from database
       await Plant.remove({});
       // add the seed data to the database
-      await Plant.create(plantSeed);
+      // await Plant.create(plantSeed);
       // get full list of plants to confirm seeding worked
-      const plants = await Plant.find({});
+      // const plants = await Plant.find({});
+      const tasks = await DailyTask.find({})
+      // console.log(tasks)
+      for(let i=0;i<tasks.length;i++) {
+        plantSeed[i].tasks.push(tasks[i]._id)
+      }
+      // add the seed data to the database
+      await Plant.create(plantSeed);
       // return full list of plants as JSON
-      res.json(plants);
+      res.json(plantSeed);
     } catch (error) {
       // return error as JSON with an error status
       res.status(400).json(error);
