@@ -4,7 +4,7 @@ const router = require("express").Router();
 const { Router } = require("express");
 //IMPORT OUR MODEL
 const Plant = require("../models/Plant")
-const DailyTask = require("./DailyTask")
+const DailyTask = require("../models/DailyTask")
 // SEED DATA FOR Plant ROUTE
 const plantSeed = [
     { 
@@ -18,7 +18,7 @@ const plantSeed = [
       sunlight:"Indirect light",
       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
       },
     {
         
@@ -32,7 +32,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        tasks:[""]     
+        tasks:[]     
      },
      {  
         
@@ -46,7 +46,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        tasks:[""]    
+        tasks:[]    
      },
 
      { 
@@ -60,7 +60,7 @@ const plantSeed = [
       sunlight:"Direct light",
       info: "The snake gourd is an annual plant with forked tendrils and kidney- or heart-shaped leaves that are sometimes palmately lobed.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
       },
     {
         
@@ -74,7 +74,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Magnolias are spreading, evergreen or deciduous trees or shrubs, characterised by large fragrant flowers which may be bowl-shaped or star-shaped, in shades of white, pink, purple, green or yellow.",
         isVisible:true,
-        tasks:[""]     
+        tasks:[]     
      },
      {  
         
@@ -88,7 +88,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Schlumbergera is a small genus of cacti with six to nine species found in the coastal mountains of south-eastern Brazil.",
         isVisible:true,
-        tasks:[""]    
+        tasks:[]    
      },
 
      { 
@@ -102,7 +102,17 @@ const plantSeed = [
       sunlight:"Indirect light",
       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
+
+        type:"Bonsai Tree",
+       img: "https://images.unsplash.com/photo-1579450841234-49351e3a312b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9uc2FpJTIwdHJlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
+       frequency: "2/week",
+       tempature:"20-24˚F",
+       water: "150ml",
+       sunlight:"Indirect light",
+       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
+       isVisible: true,
+       task:[]
       },
     {
         
@@ -115,8 +125,9 @@ const plantSeed = [
         water: "120ml",
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
-        isVisible:true,
-        tasks:[""]     
+        isVisible:true,    
+        task:[]   
+
      },
      {  
         
@@ -130,7 +141,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        tasks:[""]    
+        tasks:[]    
      },
 
      { 
@@ -144,7 +155,7 @@ const plantSeed = [
       sunlight:"Indirect light",
       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
       },
     {
         
@@ -158,7 +169,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        tasks:[""]     
+        tasks:[]     
      },
      {  
         
@@ -172,7 +183,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        tasks:[""]    
+        tasks:[]    
      },
 
      { 
@@ -186,7 +197,7 @@ const plantSeed = [
       sunlight:"Indirect light",
       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
       },
     {
         
@@ -200,7 +211,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        tasks:[""]     
+        tasks:[]     
      },
      {  
         
@@ -214,7 +225,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        tasks:[""]    
+        tasks:[]    
      },
 
      { 
@@ -228,7 +239,7 @@ const plantSeed = [
       sunlight:"Indirect light",
       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
       },
     {
         
@@ -242,7 +253,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        tasks:[""]     
+        tasks:[]     
      },
      {  
         
@@ -256,7 +267,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!",
         isVisible:true,
-        tasks:[""]    
+        tasks:[]    
      },
 
      { 
@@ -270,7 +281,7 @@ const plantSeed = [
       sunlight:"Indirect light",
       info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       isVisible: true,
-      tasks:[""],
+      tasks:[],
       },
     {
         
@@ -284,7 +295,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
         isVisible:true,
-        tasks:[""]     
+        tasks:[]     
      },
    
   ];
@@ -293,89 +304,79 @@ const plantSeed = [
 
 // Seed Route for Seeding Database
 router.get("/seed", async (req, res) => {
-    // try block for catching errors
-    try {
-      // remove all plants from database
-      await Plant.remove({});
-      // add the seed data to the database
-      await Plant.create(plantSeed);
-      // get full list of plants to confirm seeding worked
-      const plants = await Plant.find({});
-     for (i=0; i<plants.length; i++) {
-       const dailytasks = await DailyTask.find({});
-       const dailytask = await DailyTask.findById(req.params.id)
-    console.log("DailyTask")
-    const plants = await Plant.findByIdAndUpdate(req.params.plantId, {$push: {tasks: dailytask.id},
-    new: true
-    })
- 
+  // try block for catching errors
+  try {
+    // remove all plants from database
+    await Plant.remove({});
+    // add the seed data to the database
+    await Plant.create(plantSeed);
+    // get full list of plants to confirm seeding worked
+    const plants = await Plant.find({});
+    // return full list of plants as JSON
+    res.json(plants);
+  } catch (error) {
+    // return error as JSON with an error status
+    res.status(400).json(error);
   }
-      
-      // return full list of plants as JSON
-      res.json(plants);
-    } catch (error) {
-      // return error as JSON with an error status
-      res.status(400).json(error);
-    }
-  });
-  
-  // Index Route
-  router.get("/", async (req, res) => {
+});
+
+// Index Route
+router.get("/", async (req, res) => {
+  try {
+    console.count()
+    // query database for all the plants
+    const plants = await Plant.find({});
+    // send plants as JSON
+    console.count()
+    res.json(plants);
+  } catch (error) {
+    // return error as JSON with an error status
+    res.status(400).json(error);
+  }
+});
+
+// CREATE Route
+router.post("/", async (req, res) => {
+  try {
+    // pass the request body to create a new plant in the database
+    const newPlant = await Plant.create(req.body);
+    // send newly created plant back as JSON
+    res.json(newPlant);
+  } catch (error) {
+    // return error as JSON with an error status
+    res.status(400).json(error);
+  }
+});
+
+// update Route
+router.put("/:id", async (req, res) => {
+  try {
+    // pass the request body to update and existing plant in the database
+    const updatedPlant = await Plant.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    // send newly updated plant back as JSON
+    res.json(updatedPlant);
+  } catch (error) {
+    // return error as JSON with an error status
+    res.status(400).json(error);
+  }
+});
+
+// delete Route
+router.delete("/:id", async (req, res) => {
     try {
-      console.count()
-      // query database for all the plants
-      const plants = await Plant.find({});
-      // send plants as JSON
-      console.count()
-      res.json(plants);
+      // delete existing plant in the database
+      const deletedPlant = await Plant.findByIdAndRemove(req.params.id);
+      // send delete plant back as JSON
+      res.json(deletedPlant);
     } catch (error) {
       // return error as JSON with an error status
       res.status(400).json(error);
     }
   });
-  
-  // CREATE Route
-  router.post("/", async (req, res) => {
-    try {
-      // pass the request body to create a new plant in the database
-      const newPlant = await Plant.create(req.body);
-      // send newly created plant back as JSON
-      res.json(newPlant);
-    } catch (error) {
-      // return error as JSON with an error status
-      res.status(400).json(error);
-    }
-  });
-  
-  // update Route
-  router.put("/:id", async (req, res) => {
-    try {
-      // pass the request body to update and existing plant in the database
-      const updatedPlant = await Plant.findByIdAndUpdate(
-        req.params.id,
-        req.body,
-        { new: true }
-      );
-      // send newly updated plant back as JSON
-      res.json(updatedPlant);
-    } catch (error) {
-      // return error as JSON with an error status
-      res.status(400).json(error);
-    }
-  });
-  
-  // delete Route
-  router.delete("/:id", async (req, res) => {
-      try {
-        // delete existing plant in the database
-        const deletedPlant = await Plant.findByIdAndRemove(req.params.id);
-        // send delete plant back as JSON
-        res.json(deletedPlant);
-      } catch (error) {
-        // return error as JSON with an error status
-        res.status(400).json(error);
-      }
-    });
-  
+
 // export the router which has all our routes registered to it
 module.exports = router;
