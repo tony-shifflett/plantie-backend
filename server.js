@@ -4,6 +4,8 @@ require("dotenv").config();
 const plantRouter = require("./controllers/Plant")
 // Import DailyTask Router
 const taskRouter = require("./controllers/DailyTask")
+//Import FindPlant Router
+const findplantRouter = require("./controllers/FindPlants")
 //GET PORT FROM ENV VARIABLES
 const PORT = process.env.PORT;
 
@@ -29,5 +31,7 @@ app.get("/", (req, res) => res.send("Server is Working")); // <--- Route to test
 app.use("/plants", plantRouter) // send all "/plants"
 // DailyTask Router
 app.use("/dailytasks", taskRouter)
+// FindPlant Router
+app.use("/findplants", findplantRouter)
 // Server Listener
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
