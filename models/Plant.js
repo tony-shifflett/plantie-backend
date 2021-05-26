@@ -18,6 +18,7 @@ const plantSchema = new Schema(
         water: String,
         sunlight:String,
         info: String,
+        isVisible: {type:Boolean, default:true},
         tasks: [{ref:"DailyTask", type:mongoose.Schema.Types.ObjectId}]
      
       },

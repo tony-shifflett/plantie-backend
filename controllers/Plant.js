@@ -18,6 +18,8 @@ const plantSeed = [
        water: "150ml",
        sunlight:"Indirect light",
        info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
+       isVisible: true,
+       task:{DailyTask,water},
       },
     {
         
@@ -29,7 +31,9 @@ const plantSeed = [
         temperature:"34 - 36˚F",
         water: "120ml",
         sunlight:"Direct light",
-        info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands."     
+        info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands.",
+        isVisible:true,
+        task:{DailyTask,water}     
      },
      {  
         
@@ -41,7 +45,9 @@ const plantSeed = [
         temperature:"34 - 36˚F",
         water: "none",
         sunlight:"Direct light",
-        info: "Small and prickly. Harmful to touch!"    
+        info: "Small and prickly. Harmful to touch!",
+        isVisible:true,
+        task:{DailyTask,repotting}    
      },
    
   ];
