@@ -23,6 +23,97 @@ const dailytaskSeed = [
         repotting: "Time to upgrade pot size!",
            
      },
+     { 
+      water: "Time to Water!",
+      repotting: "Time to upgrade pot size!",
+      
+         
+  },
+  {
+      water: "Time to Water!",
+      repotting: "Time to upgrade pot size!",
+           
+   },
+   {  
+      water: "Time to Water!",
+      repotting: "Time to upgrade pot size!",
+         
+   },
+   { 
+    water: "Time to Water!",
+    repotting: "Time to upgrade pot size!",
+    
+       
+},
+{
+    water: "Time to Water!",
+    repotting: "Time to upgrade pot size!",
+         
+ },
+ {  
+    water: "Time to Water!",
+    repotting: "Time to upgrade pot size!",
+       
+ },
+ { 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
+{  
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+     
+},
+{ 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
+{  
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+     
+},
+{ 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
+{  
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+     
+},
+{ 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
   ];
 
 // ROUTES (async, since database actions are asynchronous)
