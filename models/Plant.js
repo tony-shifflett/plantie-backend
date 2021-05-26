@@ -8,7 +8,7 @@ const model = mongoose.model;
 // Create Song Schema
 const plantSchema = new Schema(
     {
-        name:{type:String, require:true},
+        
         binomial: {type:String, require:true},
         nickname:String,
         type:String,

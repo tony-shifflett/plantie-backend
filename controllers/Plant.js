@@ -8,7 +8,7 @@ const DailyTask = require("./DailyTask")
 // SEED DATA FOR Plant ROUTE
 const plantSeed = [
     { 
-        name:"Marsholl",
+        
         binomial: "Juniperus chinensis 'Shimpaku' ",
         nickname:"",
         type:"Bonsai Tree",
@@ -20,7 +20,7 @@ const plantSeed = [
        info: "They say that bonsai isn't just a plant, it's a way of life. Bonsai trees require regular care and maintenance. ... For beginners, Juniper bonsai trees are the easiest to care for so they're perfect for novice bonsai enthusiasts.", 
       },
     {
-        name:"Lia",
+        
         binomial:"genus Gypsophila",
         nickname:"",
         type:"Gypsophilia",
@@ -32,7 +32,7 @@ const plantSeed = [
         info: "Gypsophila is a genus of flowering plants in the carnation family, Caryophyllaceae. They are native to Eurasia, Africa, Australia, and the Pacific Islands."     
      },
      {  
-        name:"Troy",
+        
         binomial:"Cactaceae",
         nickname:"",
         type:"Cactus",
@@ -43,6 +43,7 @@ const plantSeed = [
         sunlight:"Direct light",
         info: "Small and prickly. Harmful to touch!"    
      },
+   
   ];
 
 // ROUTES (async, since database actions are asynchronous)
