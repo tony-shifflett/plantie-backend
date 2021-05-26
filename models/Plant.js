@@ -9,6 +9,8 @@ const model = mongoose.model;
 const plantSchema = new Schema(
     {
         name:{type:String, require:true},
+        binomial: {type:String, require:true},
+        nickname:String,
         type:String,
         img: String,
         frequency: String,

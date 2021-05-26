@@ -9,6 +9,8 @@ const DailyTask = require("./DailyTask")
 const plantSeed = [
     { 
         name:"Marsholl",
+        binomial: "Juniperus chinensis 'Shimpaku' ",
+        nickname:"",
         type:"Bonsai Tree",
        img: "https://images.unsplash.com/photo-1579450841234-49351e3a312b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9uc2FpJTIwdHJlZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60",
        frequency: "2/week",
@@ -19,6 +21,8 @@ const plantSeed = [
       },
     {
         name:"Lia",
+        binomial:"genus Gypsophila",
+        nickname:"",
         type:"Gypsophilia",
         img: "https://images.unsplash.com/photo-1614876753060-0751185c9289?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=635&q=80",
         frequency: "1/3-4 days",
@@ -29,6 +33,8 @@ const plantSeed = [
      },
      {  
         name:"Troy",
+        binomial:"Cactaceae",
+        nickname:"",
         type:"Cactus",
         img: "https://images.unsplash.com/photo-1508022057371-4f937727f440?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGhvdXNlJTIwY2FjdHVzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60",
         frequency: "none",
