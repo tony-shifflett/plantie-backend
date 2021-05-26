@@ -8,7 +8,9 @@ const model = mongoose.model;
 // Create Song Schema
 const plantSchema = new Schema(
     {
-        name:{type:String, require:true},
+        
+        binomial: {type:String, require:true},
+        nickname:String,
         type:String,
         img: String,
         frequency: String,
@@ -16,6 +18,7 @@ const plantSchema = new Schema(
         water: String,
         sunlight:String,
         info: String,
+        isVisible: {type:Boolean, default:true},
         tasks: [{ref:"DailyTask", type:mongoose.Schema.Types.ObjectId}]
      
       },
