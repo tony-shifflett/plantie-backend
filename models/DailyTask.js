@@ -9,7 +9,6 @@ const model = mongoose.model;
 const dailytaskSchema = new Schema(
     {
         water:String,
-        sprinkling: String,
         repotting: String,
         
      
