@@ -334,7 +334,7 @@ router.get("/", async (req, res) => {
   try {
     console.count()
     // query database for all the plants
-    const plants = await Plant.find({});
+    const plants = await Plant.find({}).populate('tasks')
     // send plants as JSON
     console.count()
     res.json(plants);
