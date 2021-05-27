@@ -309,11 +309,16 @@ router.get("/seed", async (req, res) => {
     // remove all plants from database
     await Plant.remove({});
     // add the seed data to the database
-    await Plant.create(plantSeed);
+    // await Plant.create(plantSeed);
     // get full list of plants to confirm seeding worked
-    const plants = await Plant.find({});
+    const tasks = await DailyTask.find({})
+    for(let i=0; i < tasks.length; i++){ 
+      plantSeed[i].tasks.push(tasks[i]._id)
+    }
+    await Plant.create(plantSeed)
+    // const plants = await Plant.find({});
     // return full list of plants as JSON
-    res.json(plants);
+    res.json(plantSeed);
   } catch (error) {
     // return error as JSON with an error status
     res.status(400).json(error);
