@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const model = mongoose.model;
 
 // Create Song Schema
-const plantSchema = new Schema(
+const findplantSchema = new Schema(
     {
         
         binomial: {type:String, require:true},
@@ -27,6 +27,6 @@ const plantSchema = new Schema(
   );
   
   // Create our Model Object
-  const Plant = model("Plant", plantSchema);
+  const FindPlant = model("FindPlant", findplantSchema);
 
-module.exports = Plant
+module.exports = FindPlant

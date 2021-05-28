@@ -8,24 +8,112 @@ const Plant = require("../models/Plant")
 // SEED DATA FOR dailytask ROUTE
 const dailytaskSeed = [
     { 
-        water: "Time to water",
-        sprinkling: "Time for fertilizer",
-        repotting: "Time to upgrade pot size",
+        water: "Time to Water!",
+        repotting: "Time to upgrade pot size!",
         
            
     },
     {
-        water: "Not water time",
-        sprinkling: "fertilizer",
-        repotting: "Time to upgrade pot size",
+        water: "Time to Water!",
+        repotting: "Time to upgrade pot size!",
              
      },
      {  
-        water: "Time to water",
-        sprinkling: "No fertilizer",
-        repotting: "Time to upgrade pot size",
+        water: "Time to Water!",
+        repotting: "Time to upgrade pot size!",
            
      },
+     { 
+      water: "Time to Water!",
+      repotting: "Time to upgrade pot size!",
+      
+         
+  },
+  {
+      water: "Time to Water!",
+      repotting: "Time to upgrade pot size!",
+           
+   },
+   {  
+      water: "Time to Water!",
+      repotting: "Time to upgrade pot size!",
+         
+   },
+   { 
+    water: "Time to Water!",
+    repotting: "Time to upgrade pot size!",
+    
+       
+},
+{
+    water: "Time to Water!",
+    repotting: "Time to upgrade pot size!",
+         
+ },
+ {  
+    water: "Time to Water!",
+    repotting: "Time to upgrade pot size!",
+       
+ },
+ { 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
+{  
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+     
+},
+{ 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
+{  
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+     
+},
+{ 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
+{  
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+     
+},
+{ 
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+  
+     
+},
+{
+  water: "Time to Water!",
+  repotting: "Time to upgrade pot size!",
+       
+},
   ];
 
 // ROUTES (async, since database actions are asynchronous)
